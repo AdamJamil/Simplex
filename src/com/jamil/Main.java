@@ -9,14 +9,12 @@ public class Main
 
     Main()
     {
-        double[][] vals = new double[][]{{3, 1, -1},
-                {8, 4, -1},
-                {2, 2, 1}};
-        double[] b = new double[]{15, 50, 20};
-        double[] c = new double[]{1, 2, 1};
-        boolean[] ineq = new boolean[]{false, false, false};
-        boolean[] integral = new boolean[]{false, false, false};
-        Tableau tableau = new Tableau(b.length, vals, b, c, ineq, integral);
+        double[][] vals = new double[][]{{3, 0, 4}, {2, 1, 1}, {3, 4, 1}};
+        double[] b = new double[]{10, 7, 12};
+        double[] c = new double[]{4, 5, 3};
+        boolean[] ineq = new boolean[]{true, true, true};
+        boolean[] integral = new boolean[]{true, false, true};
+        Tableau tableau = new Tableau(c.length, vals, b, c, ineq, integral);
         tableau.solve();
     }
 
